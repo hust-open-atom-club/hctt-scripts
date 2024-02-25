@@ -5,9 +5,9 @@ if [ $# -ne 1 ]; then
 	exit 0
 fi
 
-TARGET=target.md
+TARGET=/tmp/target.md
 
-pandoc $1 -f rst -t markdown -o /tmp/${TARGET}
+pandoc $1 -f rst -t markdown -o ${TARGET}
 
 if [ $? == 0 ];then
 	echo "The pandoc convertion is successful! Please check $TARGET!"
