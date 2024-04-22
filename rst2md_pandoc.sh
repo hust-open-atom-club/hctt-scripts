@@ -7,9 +7,9 @@ fi
 
 TARGET=/tmp/target.md
 
-pandoc $1 -f rst -t markdown -o ${TARGET}
+pandoc "$1" -f rst -t markdown -o ${TARGET}
 
-if [ $? == 0 ];then
+if [ $? = 0 ];then
 	echo "The pandoc convertion is successful! Please check $TARGET!"
 else
 	echo "The pandoc covertion fails!"
