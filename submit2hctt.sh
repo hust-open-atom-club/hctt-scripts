@@ -19,7 +19,7 @@ validate() {
         echo "\033[31mFill metadata \"translated_date\" before commit!\033[0m"
         exit 1
     fi
-    if [ "$(("$translated_date" - "$collected_date"))" -lt 0 ];then
+    if [ $((translated_date - collected_date)) -lt 0 ]; then
         echo "\033[31mThe \"translated_date\" should be later than \"collected_date\"!\033[0m"
         exit 1
     fi
